@@ -34,14 +34,12 @@ void randData(double *dPtr,int N,int M)
 }
 void findColSum(const double *dPtr,double *result,int N,int M)
 {
-	int p = 0;
 	for(int i = 0;i<N;i++)
 	{
 		for(int j=0;j<M;j++) 
 		{
-			*(result+i) += *(dPtr+N*j+p);
+			*(result+i) += *(dPtr+N*j+i);
 		}
-		p++;
 	}
 }
 void showData(double (*dPtr),int N,int M)
