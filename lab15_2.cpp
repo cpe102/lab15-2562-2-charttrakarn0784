@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cstdlib>
 #include<ctime>
+#include<iomanip>
 using namespace std;
 
 void randData(double *,int,int);
@@ -49,7 +50,7 @@ void showData(double (*dPtr),int N,int M)
 	{
 		for(int j = 0;j < M;j++)
 		{
-			cout << *(dPtr+p) << " ";
+			cout << setw(3) << fixed << setprecision(2) << *(dPtr+p) << " ";
 			p++;
 		}
 		cout << "\n";
